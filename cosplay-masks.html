@@ -1,86 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cosplay Masks - Visionary Decalz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosplay Masks - Visionary Decalz</title>
 
-  <style>
-    body{
-      margin:0;
-      background:black;
-      color:white;
-      font-family:Arial;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-    nav{
-      background:#111;
-      padding:20px;
-      border-bottom:1px solid #18e7cf;
-    }
+<style>
 
-    nav a{
-      color:#18e7cf;
-      text-decoration:none;
-      font-weight:bold;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .container{
-      padding:50px;
-    }
+body{
+  background:#000;
+  color:white;
+  font-family:Inter,sans-serif;
+  overflow-x:hidden;
+}
 
-    h1{
-      color:#18e7cf;
-      font-size:48px;
-    }
+/* NAVBAR */
 
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:25px;
-      margin-top:40px;
-    }
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
 
-    .product{
-      background:#111;
-      border:1px solid #18e7cf;
-      border-radius:20px;
-      padding:20px;
-    }
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-    button{
-      background:#18e7cf;
-      border:none;
-      padding:12px 20px;
-      border-radius:10px;
-      cursor:pointer;
-      font-weight:bold;
-      margin-top:15px;
-    }
-  </style>
+  padding:20px 50px;
+
+  background:rgba(0,0,0,.72);
+
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(24,231,207,.28);
+}
+
+.logo{
+  font-family:Orbitron,sans-serif;
+  font-size:2rem;
+  font-weight:900;
+
+  color:#18e7cf;
+
+  text-shadow:
+    0 0 20px rgba(24,231,207,.35);
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  font-size:.9rem;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:140px 50px 80px;
+
+  position:relative;
+
+  background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.78)),
+    url("cosplay-bg.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at top right,
+    rgba(24,231,207,.18),
+    transparent 30%);
+
+  z-index:1;
+}
+
+/* CONTENT */
+
+.content-box{
+  position:relative;
+  z-index:2;
+
+  max-width:750px;
+
+  background:rgba(0,0,0,.72);
+
+  border:1px solid rgba(24,231,207,.32);
+
+  border-radius:12px;
+
+  padding:55px;
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+    0 0 45px rgba(24,231,207,.12);
+
+  text-align:center;
+}
+
+h1{
+  font-family:Orbitron,sans-serif;
+
+  font-size:clamp(3rem,7vw,6rem);
+
+  line-height:.92;
+
+  margin-bottom:25px;
+}
+
+h1 span{
+  color:#18e7cf;
+
+  text-shadow:
+    0 0 25px rgba(24,231,207,.45);
+}
+
+.subtitle{
+  color:#18e7cf;
+
+  font-size:1rem;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  margin-bottom:18px;
+
+  font-weight:800;
+}
+
+.content-box p{
+  color:#e4e4e4;
+
+  font-size:1.12rem;
+
+  line-height:1.85;
+
+  margin-bottom:35px;
+}
+
+/* BUTTON */
+
+.buy-btn{
+  display:inline-block;
+
+  padding:18px 42px;
+
+  background:#18e7cf;
+
+  color:black;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+
+  text-decoration:none;
+
+  border-radius:6px;
+
+  font-size:1rem;
+
+  letter-spacing:1px;
+
+  box-shadow:
+    0 0 25px rgba(24,231,207,.35);
+
+  transition:.25s;
+}
+
+.buy-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 0 35px rgba(24,231,207,.55);
+}
+
+/* PRODUCTS */
+
+.products{
+  padding:100px 50px;
+
+  background:#050505;
+}
+
+.products h2{
+  text-align:center;
+
+  font-family:Orbitron,sans-serif;
+
+  font-size:3rem;
+
+  margin-bottom:50px;
+}
+
+.products h2 span{
+  color:#18e7cf;
+}
+
+.product-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:30px;
+
+  max-width:1300px;
+
+  margin:auto;
+}
+
+.product-card{
+  background:#0b0b0b;
+
+  border:1px solid rgba(24,231,207,.18);
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+  transition:.25s;
+}
+
+.product-card:hover{
+  transform:translateY(-6px);
+
+  border-color:#18e7cf;
+}
+
+.product-card img{
+  width:100%;
+
+  height:300px;
+
+  object-fit:cover;
+}
+
+.product-info{
+  padding:24px;
+}
+
+.product-info h3{
+  color:#18e7cf;
+
+  margin-bottom:12px;
+
+  font-size:1.2rem;
+}
+
+.product-info p{
+  color:#bcbcbc;
+
+  line-height:1.7;
+
+  margin-bottom:18px;
+}
+
+.price{
+  font-size:1.2rem;
+
+  font-weight:900;
+
+  color:white;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+
+  padding:40px;
+
+  color:#777;
+
+  border-top:1px solid #222;
+
+  background:black;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:18px;
+
+    padding:18px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    padding:150px 24px 70px;
+  }
+
+  .content-box{
+    padding:35px 24px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
-  <a href="index.html">← Back To Home</a>
+
+  <div class="logo">
+    Visionary Decalz
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
 </nav>
 
-<div class="container">
+<!-- HERO -->
 
-<h1>Cosplay Masks</h1>
+<div class="hero">
 
-<div class="products">
+  <div class="content-box">
 
-<div class="product">
-  <h2>Coming Soon</h2>
-  <p>Add your cosplay mask products here.</p>
-  <button>Buy Now</button>
+    <div class="subtitle">
+      PREMIUM 3D PRINTED MASKS
+    </div>
+
+    <h1>
+      COSPLAY
+      <span>MASKS</span>
+    </h1>
+
+    <p>
+      High quality 3D printed cosplay masks designed
+      for collectors, conventions, displays, and custom builds.
+    </p>
+
+    <a href="#products" class="buy-btn">
+      Buy Now
+    </a>
+
+  </div>
+
 </div>
 
-</div>
+<!-- PRODUCTS -->
 
-</div>
+<section class="products" id="products">
+
+  <h2>
+    Featured <span>Masks</span>
+  </h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Mask">
+
+      <div class="product-info">
+        <h3>Demon Oni Mask</h3>
+
+        <p>
+          Custom detailed demon-inspired mask with
+          aggressive cyber styling.
+        </p>
+
+        <div class="price">$89.99</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1200&auto=format&fit=crop" alt="Mask">
+
+      <div class="product-info">
+        <h3>Cyber Skull Mask</h3>
+
+        <p>
+          Futuristic skull-style wearable display mask
+          with premium detailing.
+        </p>
+
+        <div class="price">$94.99</div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop" alt="Mask">
+
+      <div class="product-info">
+        <h3>Stealth Hunter Mask</h3>
+
+        <p>
+          Sleek tactical cosplay helmet inspired by
+          futuristic sci-fi armor.
+        </p>
+
+        <div class="price">$109.99</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  © 2026 Visionary Decalz — Custom 3D Printed Merch & Designs
+</footer>
 
 </body>
 </html>
