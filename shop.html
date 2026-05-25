@@ -1,1 +1,138 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - Visionary Decalz</title>
+
+  <style>
+    body{
+      margin:0;
+      background:black;
+      color:white;
+      font-family:Arial;
+    }
+
+    nav{
+      background:#111;
+      padding:20px;
+      border-bottom:1px solid #18e7cf;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav a{
+      color:#18e7cf;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .container{
+      padding:60px;
+    }
+
+    h1{
+      color:#18e7cf;
+      text-align:center;
+      font-size:50px;
+      margin-bottom:50px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#111;
+      border:1px solid #18e7cf;
+      border-radius:20px;
+      padding:30px;
+      text-align:center;
+      transition:0.3s;
+      cursor:pointer;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 0 20px rgba(24,231,207,0.4);
+    }
+
+    .icon{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .card h2{
+      margin-bottom:15px;
+      color:#18e7cf;
+    }
+
+    .card p{
+      color:#ccc;
+    }
+
+    .card-link{
+      text-decoration:none;
+      color:white;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">← Back To Home</a>
+
+  <div>
+    Visionary Decalz Shop
+  </div>
+</nav>
+
+<div class="container">
+
+<h1>Shop Categories</h1>
+
+<div class="grid">
+
+<a class="card-link" href="cosplay-masks.html">
+  <div class="card">
+    <div class="icon">🎭</div>
+    <h2>Cosplay Masks</h2>
+    <p>Custom wearable cosplay masks and props.</p>
+  </div>
+</a>
+
+<a class="card-link" href="anime-figures.html">
+  <div class="card">
+    <div class="icon">⚡</div>
+    <h2>Anime Figures</h2>
+    <p>Anime and Pokemon-inspired 3D printed figures.</p>
+  </div>
+</a>
+
+<a class="card-link" href="keychains.html">
+  <div class="card">
+    <div class="icon">🔑</div>
+    <h2>Keychains</h2>
+    <p>Custom keychains and accessories.</p>
+  </div>
+</a>
+
+<a class="card-link" href="car-emblems.html">
+  <div class="card">
+    <div class="icon">🚗</div>
+    <h2>Car Emblems</h2>
+    <p>Custom car badges and automotive designs.</p>
+  </div>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
