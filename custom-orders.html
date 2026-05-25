@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Order - Visionary Decalz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#000;
+  color:white;
+  font-family:Inter,sans-serif;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:rgba(0,0,0,.85);
+  border-bottom:1px solid rgba(24,231,207,.3);
+}
+
+.logo{
+  font-family:Orbitron,sans-serif;
+  font-size:2rem;
+  font-weight:900;
+  color:#18e7cf;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  text-transform:uppercase;
+  font-size:.9rem;
+}
+
+.page{
+  min-height:100vh;
+  padding:70px 30px;
+  background:
+    linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.92)),
+    radial-gradient(circle at top right,rgba(24,231,207,.22),transparent 30%),
+    #050505;
+}
+
+.form-box{
+  max-width:850px;
+  margin:auto;
+  background:rgba(0,0,0,.72);
+  border:1px solid rgba(24,231,207,.4);
+  border-radius:12px;
+  padding:40px;
+  box-shadow:0 0 45px rgba(24,231,207,.15);
+}
+
+h1{
+  font-family:Orbitron,sans-serif;
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+h1 span{
+  color:#18e7cf;
+}
+
+p{
+  color:#ccc;
+  line-height:1.7;
+  margin-bottom:30px;
+}
+
+label{
+  display:block;
+  margin-bottom:8px;
+  font-weight:800;
+  color:#18e7cf;
+}
+
+input, select, textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:22px;
+  background:#0d0d0d;
+  color:white;
+  border:1px solid rgba(24,231,207,.35);
+  border-radius:6px;
+  font-size:1rem;
+}
+
+textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+button{
+  background:#18e7cf;
+  color:black;
+  border:none;
+  padding:16px 38px;
+  font-weight:900;
+  text-transform:uppercase;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+button:hover{
+  transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+  nav{
+    flex-direction:column;
+    gap:18px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  h1{
+    font-size:2.3rem;
+  }
+
+  .form-box{
+    padding:28px 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Visionary Decalz</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <div class="form-box">
+
+    <h1>Custom <span>Order</span></h1>
+
+    <p>
+      Fill out the form below with what you want made. When you hit send,
+      it will open your email app with the order details ready to send.
+    </p>
+
+    <form action="mailto:visionarydecals@gmail.com" method="post" enctype="text/plain">
+
+      <label>Your Name</label>
+      <input type="text" name="Name" required>
+
+      <label>Your Email</label>
+      <input type="email" name="Email" required>
+
+      <label>What do you want made?</label>
+      <select name="Product Type" required>
+        <option value="">Select one</option>
+        <option>Cosplay Mask</option>
+        <option>Anime Figure</option>
+        <option>Keychain</option>
+        <option>Car Emblem</option>
+        <option>Decal</option>
+        <option>Other Custom Item</option>
+      </select>
+
+      <label>Color / Colors</label>
+      <input type="text" name="Colors" placeholder="Example: black, white, teal">
+
+      <label>Size / Measurements</label>
+      <input type="text" name="Size" placeholder="Example: 6 inches wide, 100mm tall">
+
+      <label>Quantity</label>
+      <input type="number" name="Quantity" min="1" placeholder="1">
+
+      <label>Material Preference</label>
+      <select name="Material">
+        <option>No preference</option>
+        <option>PLA</option>
+        <option>PETG</option>
+        <option>ASA</option>
+        <option>Resin Style Finish</option>
+      </select>
+
+      <label>Finish Preference</label>
+      <select name="Finish">
+        <option>No preference</option>
+        <option>Raw 3D Print</option>
+        <option>Sanded</option>
+        <option>Painted</option>
+        <option>Primer Ready</option>
+        <option>Gloss Finish</option>
+        <option>Matte Finish</option>
+      </select>
+
+      <label>Describe your custom order</label>
+      <textarea name="Order Details" placeholder="Explain what you want, colors, style, references, car model, character idea, deadline, etc." required></textarea>
+
+      <label>Reference Link</label>
+      <input type="text" name="Reference Link" placeholder="Paste an image/link if you have one">
+
+      <button type="submit">Send Custom Order</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+</body>
+</html>
