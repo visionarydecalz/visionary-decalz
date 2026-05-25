@@ -1,1 +1,426 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miscellaneous Prints - Visionary Decalz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  color:white;
+  font-family:Inter,sans-serif;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 50px;
+
+  background:rgba(0,0,0,.72);
+
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(24,231,207,.28);
+}
+
+.logo{
+  font-family:Orbitron,sans-serif;
+  font-size:2rem;
+  font-weight:900;
+
+  color:#18e7cf;
+
+  text-shadow:
+    0 0 20px rgba(24,231,207,.35);
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  font-size:.9rem;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:140px 50px 80px;
+
+  position:relative;
+
+  background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.78)),
+    url("misc-bg.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at top right,
+    rgba(24,231,207,.18),
+    transparent 30%);
+
+  z-index:1;
+}
+
+/* CONTENT */
+
+.content-box{
+  position:relative;
+  z-index:2;
+
+  max-width:760px;
+
+  background:rgba(0,0,0,.72);
+
+  border:1px solid rgba(24,231,207,.32);
+
+  border-radius:12px;
+
+  padding:55px;
+
+  backdrop-filter:blur(12px);
+
+  box-shadow:
+    0 0 45px rgba(24,231,207,.12);
+
+  text-align:center;
+}
+
+.subtitle{
+  color:#18e7cf;
+
+  font-size:1rem;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  margin-bottom:18px;
+
+  font-weight:800;
+}
+
+h1{
+  font-family:Orbitron,sans-serif;
+
+  font-size:clamp(3rem,7vw,6rem);
+
+  line-height:.92;
+
+  margin-bottom:25px;
+}
+
+h1 span{
+  color:#18e7cf;
+
+  text-shadow:
+    0 0 25px rgba(24,231,207,.45);
+}
+
+.content-box p{
+  color:#e4e4e4;
+
+  font-size:1.12rem;
+
+  line-height:1.85;
+
+  margin-bottom:35px;
+}
+
+/* BUTTON */
+
+.buy-btn{
+  display:inline-block;
+
+  padding:18px 42px;
+
+  background:#18e7cf;
+
+  color:black;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+
+  text-decoration:none;
+
+  border-radius:6px;
+
+  font-size:1rem;
+
+  letter-spacing:1px;
+
+  box-shadow:
+    0 0 25px rgba(24,231,207,.35);
+
+  transition:.25s;
+}
+
+.buy-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 0 35px rgba(24,231,207,.55);
+}
+
+/* PRODUCT SECTION */
+
+.products{
+  padding:90px 40px;
+
+  background:#050505;
+}
+
+.products h2{
+  text-align:center;
+
+  font-family:Orbitron,sans-serif;
+
+  font-size:2.8rem;
+
+  margin-bottom:45px;
+
+  color:#18e7cf;
+}
+
+.product-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:30px;
+
+  max-width:1200px;
+
+  margin:auto;
+}
+
+.product-card{
+  background:#0b0b0b;
+
+  border:1px solid rgba(24,231,207,.2);
+
+  border-radius:12px;
+
+  overflow:hidden;
+
+  transition:.25s;
+}
+
+.product-card:hover{
+  transform:translateY(-5px);
+
+  border-color:#18e7cf;
+}
+
+.product-card img{
+  width:100%;
+
+  height:280px;
+
+  object-fit:cover;
+}
+
+.product-info{
+  padding:22px;
+}
+
+.product-info h3{
+  color:#18e7cf;
+
+  margin-bottom:10px;
+}
+
+.product-info p{
+  color:#cfcfcf;
+
+  margin-bottom:12px;
+}
+
+.price{
+  font-size:1.2rem;
+
+  font-weight:900;
+
+  color:white;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+
+  padding:40px;
+
+  color:#777;
+
+  border-top:1px solid #222;
+
+  background:black;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:18px;
+
+    padding:18px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    padding:150px 24px 70px;
+  }
+
+  .content-box{
+    padding:35px 24px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+  <div class="logo">
+    Visionary Decalz
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="miscellaneous.html">Misc</a>
+    <a href="custom-orders.html">Custom Orders</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+</nav>
+
+<div class="hero">
+
+  <div class="content-box">
+
+    <div class="subtitle">
+      RANDOM PRINTS & CREATIONS
+    </div>
+
+    <h1>
+      MISC
+      <span>PRINTS</span>
+    </h1>
+
+    <p>
+      Unique 3D printed gadgets, desk items,
+      decor, trending prints, accessories,
+      tools, gifts, and random creations.
+    </p>
+
+    <a href="#products" class="buy-btn">
+      Browse Prints
+    </a>
+
+  </div>
+
+</div>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+  <h2>
+    Available Prints
+  </h2>
+
+  <div class="product-grid">
+
+    <!-- PRODUCT CARD -->
+
+    <div class="product-card">
+
+      <img src="product-1.png" alt="Product">
+
+      <div class="product-info">
+
+        <h3>Custom Print</h3>
+
+        <p>
+          Add your product description here.
+        </p>
+
+        <div class="price">
+          $19.99
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Visionary Decalz — Custom 3D Printed Merch & Designs
+</footer>
+
+</body>
+</html>
