@@ -8,12 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
   background:#000;
@@ -22,24 +17,17 @@ body{
   overflow-x:hidden;
 }
 
-/* NAVBAR */
-
 nav{
   position:fixed;
   top:0;
   width:100%;
   z-index:1000;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   padding:20px 50px;
-
   background:rgba(0,0,0,.55);
-
   backdrop-filter:blur(10px);
-
   border-bottom:1px solid rgba(24,231,207,.22);
 }
 
@@ -47,142 +35,83 @@ nav{
   font-family:Orbitron,sans-serif;
   font-size:2rem;
   font-weight:900;
-
   color:#18e7cf;
-
-  text-shadow:
-    0 0 20px rgba(24,231,207,.35);
+  text-shadow:0 0 20px rgba(24,231,207,.35);
 }
 
-.nav-links{
-  display:flex;
-  gap:30px;
-}
+.nav-links{display:flex;gap:30px}
 
 .nav-links a{
   color:white;
   text-decoration:none;
-
   font-weight:800;
-
   text-transform:uppercase;
-
   letter-spacing:1px;
-
   font-size:.9rem;
 }
 
-.nav-links a:hover{
-  color:white;
-}
-
-/* HERO SECTION */
-
 .hero{
   min-height:100vh;
-
   display:flex;
   align-items:center;
-
   padding:140px 70px 80px;
-
   position:relative;
-
   background:
-    linear-gradient(
-      rgba(0,0,0,.45),
-      rgba(0,0,0,.72)
-    ),
-
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.72)),
     url("homepage-bg.png");
-
   background-size:cover;
-
   background-position:center center;
-
   background-repeat:no-repeat;
 }
 
 .hero::before{
   content:"";
-
   position:absolute;
   inset:0;
-
-  background:
-    radial-gradient(circle at top right,
-    rgba(24,231,207,.18),
-    transparent 30%);
-
+  background:radial-gradient(circle at top right,rgba(24,231,207,.18),transparent 30%);
   z-index:1;
 }
-
-/* CONTENT BOX */
 
 .hero-box{
   position:relative;
   z-index:2;
-
   max-width:650px;
-
   background:rgba(0,0,0,.72);
-
   border:1px solid rgba(24,231,207,.32);
-
   border-radius:12px;
-
   padding:55px;
-
   backdrop-filter:blur(12px);
-
-  box-shadow:
-    0 0 45px rgba(24,231,207,.12);
+  box-shadow:0 0 45px rgba(24,231,207,.12);
 }
 
 .badge{
   display:inline-block;
-
   color:#18e7cf;
-
   font-size:.85rem;
-
   font-weight:900;
-
   letter-spacing:2px;
-
   margin-bottom:22px;
-
   text-transform:uppercase;
 }
 
 h1{
   font-family:Orbitron,sans-serif;
-
   font-size:clamp(3rem,7vw,6rem);
-
   line-height:.92;
-
   margin-bottom:25px;
 }
 
 h1 span{
   color:#18e7cf;
-
-  text-shadow:
-    0 0 25px rgba(24,231,207,.45);
+  text-shadow:0 0 25px rgba(24,231,207,.45);
 }
 
 .hero-box p{
   color:#e4e4e4;
-
   font-size:1.12rem;
-
   line-height:1.85;
-
   margin-bottom:35px;
 }
-
-/* BUTTONS */
 
 .buttons{
   display:flex;
@@ -192,156 +121,162 @@ h1 span{
 
 button{
   padding:15px 35px;
-
   border:none;
   border-radius:6px;
-
   font-size:.95rem;
-
   font-weight:900;
-
   cursor:pointer;
-
   text-transform:uppercase;
-
   transition:.25s;
 }
 
-.primary{
-  background:#18e7cf;
-  color:black;
-}
-
-.primary:hover{
-  transform:translateY(-4px);
-}
-
-.secondary{
-  background:transparent;
-
-  border:2px solid #18e7cf;
-
-  color:white;
-}
-
-.secondary:hover{
-  background:rgba(24,231,207,.1);
-}
-
-/* SECTIONS */
+.primary{background:#18e7cf;color:black}
+.secondary{background:transparent;border:2px solid #18e7cf;color:white}
 
 section{
   padding:100px 50px;
-
   background:#050505;
 }
 
 section h2{
   text-align:center;
-
   font-family:Orbitron,sans-serif;
-
   font-size:3rem;
-
   margin-bottom:35px;
 }
 
-section h2 span{
-  color:#18e7cf;
-}
+section h2 span{color:#18e7cf}
 
 .about-text{
   max-width:900px;
-
   margin:auto;
-
   text-align:center;
-
   color:#aaa;
-
   line-height:1.9;
-
   font-size:1.05rem;
 }
 
-/* FOOTER */
-
 footer{
   text-align:center;
-
   padding:40px;
-
   color:#777;
-
   border-top:1px solid #222;
-
   background:black;
 }
 
-/* MOBILE */
-
+/* MOBILE ONLY */
 @media(max-width:768px){
-
   nav{
+    position:absolute;
     flex-direction:column;
-    gap:18px;
+    gap:12px;
+    padding:14px 12px;
+    background:rgba(0,0,0,.78);
+  }
 
-    padding:18px;
+  .logo{
+    font-size:1.45rem;
+    text-align:center;
   }
 
   .nav-links{
+    gap:10px;
     flex-wrap:wrap;
     justify-content:center;
   }
 
-  .hero{
-    padding:150px 24px 70px;
+  .nav-links a{
+    font-size:.72rem;
+    letter-spacing:.5px;
+  }
 
+  .hero{
+    min-height:100vh;
+    justify-content:center;
+    padding:155px 18px 55px;
     background-position:center center;
   }
 
   .hero-box{
-    padding:35px 24px;
+    width:100%;
+    max-width:420px;
+    padding:28px 20px;
+    text-align:center;
+    border-radius:10px;
   }
 
-}
+  .badge{
+    font-size:.68rem;
+    letter-spacing:1px;
+    margin-bottom:16px;
+  }
 
+  h1{
+    font-size:2.35rem;
+    line-height:1;
+    margin-bottom:18px;
+  }
+
+  .hero-box p{
+    font-size:.95rem;
+    line-height:1.6;
+    margin-bottom:24px;
+  }
+
+  .buttons{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .buttons a,
+  .buttons button{
+    width:100%;
+  }
+
+  button{
+    padding:14px 20px;
+  }
+
+  section{
+    padding:65px 22px;
+  }
+
+  section h2{
+    font-size:2rem;
+  }
+
+  .about-text{
+    font-size:.95rem;
+  }
+
+  footer{
+    padding:28px 18px;
+    font-size:.85rem;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
-
-  <div class="logo">
-    Visionary Decalz
-  </div>
+  <div class="logo">Visionary Decalz</div>
 
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="shop.html">Shop</a>
+    <a href="miscellaneous.html">Misc</a>
+    <a href="custom-orders.html">Custom Orders</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
-
 </nav>
 
-<!-- HERO -->
-
 <div class="hero">
-
   <div class="hero-box">
+    <div class="badge">CUSTOM 3D PRINTED PRODUCTS</div>
 
-    <div class="badge">
-      CUSTOM 3D PRINTED PRODUCTS
-    </div>
-
-    <h1>
-      BUILD YOUR
-      <span>VISION</span>
-    </h1>
+    <h1>BUILD YOUR <span>VISION</span></h1>
 
     <p>
       Custom 3D printed masks, figures, keychains,
@@ -350,62 +285,31 @@ footer{
     </p>
 
     <div class="buttons">
-
-      <a href="shop.html">
-        <button class="primary">
-          Shop Now
-        </button>
-      </a>
-
-      <a href="custom-orders.html">
-        <button class="secondary">
-          Custom Orders
-        </button>
-      </a>
-
+      <a href="shop.html"><button class="primary">Shop Now</button></a>
+      <a href="custom-orders.html"><button class="secondary">Custom Orders</button></a>
     </div>
-
   </div>
-
 </div>
 
-<!-- ABOUT -->
-
 <section id="about">
-
-  <h2>
-    About <span>Visionary Decalz</span>
-  </h2>
+  <h2>About <span>Visionary Decalz</span></h2>
 
   <p class="about-text">
     Visionary Decalz creates custom 3D printed merchandise for collectors,
     car enthusiasts, gamers, and cosplay fans. From detailed prints to custom
     emblems and accessories, every piece is made to match your vision.
   </p>
-
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
-
-  <h2>
-    Contact <span>Us</span>
-  </h2>
+  <h2>Contact <span>Us</span></h2>
 
   <p class="about-text">
-    Instagram: @VisionaryDecalz
-    <br><br>
-
-    Email: visionarydecals@gmail.com
-    <br><br>
-
+    Instagram: @VisionaryDecalz<br><br>
+    Email: visionarydecals@gmail.com<br><br>
     Custom builds available on request.
   </p>
-
 </section>
-
-<!-- FOOTER -->
 
 <footer>
   © 2026 Visionary Decalz — Custom 3D Printed Merch & Designs
