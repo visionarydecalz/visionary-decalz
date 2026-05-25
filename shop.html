@@ -146,28 +146,78 @@ footer{
   background:black;
 }
 
+/* MOBILE OPTIMIZATION */
 @media(max-width:768px){
+
   nav{
+    position:absolute;
     flex-direction:column;
-    gap:18px;
-    padding:18px;
+    gap:12px;
+    padding:14px 12px;
+    background:rgba(0,0,0,.78);
+  }
+
+  .logo{
+    font-size:1.45rem;
+    text-align:center;
   }
 
   .nav-links{
+    gap:10px;
     flex-wrap:wrap;
     justify-content:center;
   }
 
+  .nav-links a{
+    font-size:.72rem;
+    letter-spacing:.5px;
+  }
+
   .shop-hero{
-    padding:150px 22px 70px;
+    min-height:100vh;
+    justify-content:center;
+    padding:155px 18px 55px;
+    background-position:center center;
   }
 
   .shop-box{
-    padding:35px 24px;
+    width:100%;
+    max-width:420px;
+    padding:28px 20px;
+    text-align:center;
+    border-radius:10px;
+  }
+
+  .badge{
+    font-size:.68rem;
+    letter-spacing:1px;
+    margin-bottom:16px;
+  }
+
+  h1{
+    font-size:2.35rem;
+    line-height:1;
+    margin-bottom:18px;
+  }
+
+  .shop-box p{
+    font-size:.95rem;
+    line-height:1.6;
+    margin-bottom:24px;
   }
 
   .category-grid{
     grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .category-card{
+    padding:18px;
+  }
+
+  footer{
+    padding:28px 18px;
+    font-size:.85rem;
   }
 }
 </style>
@@ -182,8 +232,9 @@ footer{
     <a href="index.html">Home</a>
     <a href="shop.html">Shop</a>
     <a href="miscellaneous.html">Misc</a>
+    <a href="custom-orders.html">Custom Orders</a>
     <a href="index.html#about">About</a>
-    <a href="index.html#contact">Contact</a>    
+    <a href="index.html#contact">Contact</a>
   </div>
 </nav>
 
@@ -194,7 +245,7 @@ footer{
     <h1>SHOP OUR <span>COLLECTION</span></h1>
 
     <p>
-      Browse custom 3D printed masks, figures, keychains, decals, and automotive emblems.
+      Browse custom 3D printed masks, figures, keychains, decals, random prints, and automotive emblems.
     </p>
 
     <div class="category-grid">
@@ -216,12 +267,11 @@ footer{
       <a class="category-card" href="car-emblems.html">
         <h2>Car Emblems</h2>
         <p>Badges and automotive designs.</p>
+      </a>
 
-        <a class="category-card" href="miscellaneous.html">
-  <h2>Miscellaneous</h2>
-  <p>Unique prints, gadgets, decor, accessories, and more.</p>
-</a>
-        
+      <a class="category-card" href="miscellaneous.html">
+        <h2>Miscellaneous</h2>
+        <p>Random prints, gadgets, decor, and more.</p>
       </a>
     </div>
   </div>
