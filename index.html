@@ -72,8 +72,8 @@
     }
 
     .nav-links a:hover {
-      color: #18e7cf;
-      text-shadow: 0 0 12px rgba(24, 231, 207, 0.7);
+      color: white;
+      text-shadow: none;
     }
 
     .hero {
@@ -85,11 +85,11 @@
       padding: 145px 40px 90px;
       overflow: hidden;
       background:
-        linear-gradient(135deg, rgba(0,0,0,0.88), rgba(0,0,0,0.58), rgba(0,0,0,0.9)),
-        radial-gradient(circle at 20% 25%, rgba(24,231,207,0.40), transparent 28%),
-        radial-gradient(circle at 85% 70%, rgba(255,255,255,0.14), transparent 24%),
-        repeating-linear-gradient(135deg, rgba(24,231,207,0.09) 0 2px, transparent 2px 38px),
-        #050505;
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+        radial-gradient(circle at 20% 20%, rgba(0,255,255,0.24), transparent 22%),
+        radial-gradient(circle at 80% 25%, rgba(0,170,255,0.20), transparent 22%),
+        radial-gradient(circle at 50% 80%, rgba(24,231,207,0.14), transparent 25%),
+        linear-gradient(135deg, #050505 0%, #07151a 45%, #020202 100%);
     }
 
     .hero::before {
@@ -97,26 +97,48 @@
       position: absolute;
       inset: 0;
       z-index: 1;
-      background-image: url("data:image/svg+xml,%3Csvg width='1600' height='950' viewBox='0 0 1600 950' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.95'%3E%3Ctext x='70' y='230' font-size='130' font-family='Arial Black' fill='none' stroke='%2318e7cf' stroke-width='3' opacity='0.22' transform='rotate(-8 70 230)'%3E3D PRINT%3C/text%3E%3Ctext x='760' y='220' font-size='115' font-family='Arial Black' fill='none' stroke='%23ffffff' stroke-width='2' opacity='0.13' transform='rotate(7 760 220)'%3ECUSTOM%3C/text%3E%3Ctext x='120' y='760' font-size='120' font-family='Arial Black' fill='none' stroke='%2318e7cf' stroke-width='3' opacity='0.18' transform='rotate(5 120 760)'%3ECOSPLAY%3C/text%3E%3Ctext x='850' y='780' font-size='105' font-family='Arial Black' fill='none' stroke='%23ffffff' stroke-width='2' opacity='0.13' transform='rotate(-6 850 780)'%3EEMBLEMS%3C/text%3E%3C/g%3E%3Cg fill='none' stroke='%2318e7cf' stroke-width='5' stroke-linecap='round' stroke-linejoin='round' opacity='0.38'%3E%3Cpath d='M105 325h250v280H105z'/%3E%3Cpath d='M150 270h160v55H150z'/%3E%3Cpath d='M150 405h165'/%3E%3Cpath d='M150 465h210'/%3E%3Cpath d='M150 525h150'/%3E%3Cpath d='M190 605h85v80h-85z'/%3E%3Cpath d='M1145 310c70 0 125 55 125 125s-55 125-125 125s-125-55-125-125s55-125 125-125z'/%3E%3Cpath d='M1085 420c25 25 95 25 120 0'/%3E%3Cpath d='M1095 380h1M1195 380h1'/%3E%3Cpath d='M1260 610h185v80h-185z'/%3E%3Cpath d='M1300 610v-60h105v60'/%3E%3Ccircle cx='1378' cy='650' r='16'/%3E%3Cpath d='M615 330c45-50 160-50 205 0c30 32 30 110 0 150c-40 55-165 55-205 0c-30-40-30-118 0-150z'/%3E%3Cpath d='M665 405h1M770 405h1'/%3E%3Cpath d='M685 475c32 22 72 22 104 0'/%3E%3Cpath d='M730 550v105'/%3E%3Cpath d='M690 655h80'/%3E%3C/g%3E%3Cg fill='%2318e7cf' opacity='0.18'%3E%3Ccircle cx='90' cy='710' r='18'/%3E%3Ccircle cx='1320' cy='210' r='24'/%3E%3Ccircle cx='1475' cy='720' r='14'/%3E%3Ccircle cx='460' cy='210' r='12'/%3E%3Ccircle cx='915' cy='620' r='18'/%3E%3C/g%3E%3C/svg%3E");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(24,231,207,0.07) 0px,
+          rgba(24,231,207,0.07) 1px,
+          transparent 1px,
+          transparent 52px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          rgba(24,231,207,0.045) 0px,
+          rgba(24,231,207,0.045) 1px,
+          transparent 1px,
+          transparent 52px
+        );
       pointer-events: none;
     }
 
-    .paint-drips {
+    .hero::after {
+      content: "";
       position: absolute;
       inset: 0;
       z-index: 2;
+      background-image: url("data:image/svg+xml,%3Csvg width='1600' height='950' viewBox='0 0 1600 950' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2318e7cf' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' opacity='0.34'%3E%3Cpath d='M110 310h255v295H110z'/%3E%3Cpath d='M160 250h155v60H160z'/%3E%3Cpath d='M155 390h165'/%3E%3Cpath d='M155 455h210'/%3E%3Cpath d='M155 520h150'/%3E%3Cpath d='M198 605h85v75h-85z'/%3E%3Cpath d='M610 330c45-50 160-50 205 0c30 32 30 110 0 150c-40 55-165 55-205 0c-30-40-30-118 0-150z'/%3E%3Cpath d='M660 405h1M765 405h1'/%3E%3Cpath d='M680 475c32 22 72 22 104 0'/%3E%3Cpath d='M730 550v105'/%3E%3Cpath d='M690 655h80'/%3E%3Cpath d='M1130 315c68 0 122 54 122 122s-54 122-122 122s-122-54-122-122s54-122 122-122z'/%3E%3Cpath d='M1070 430c25 25 95 25 120 0'/%3E%3Cpath d='M1080 385h1M1180 385h1'/%3E%3Cpath d='M1260 610h185v80h-185z'/%3E%3Cpath d='M1300 610v-60h105v60'/%3E%3Ccircle cx='1378' cy='650' r='16'/%3E%3Cpath d='M430 185h180M460 215h235M980 185h225M1010 215h155M1035 245h230'/%3E%3C/g%3E%3Cg fill='%2318e7cf' opacity='0.18'%3E%3Ccircle cx='92' cy='720' r='18'/%3E%3Ccircle cx='1320' cy='210' r='24'/%3E%3Ccircle cx='1485' cy='720' r='14'/%3E%3Ccircle cx='460' cy='210' r='12'/%3E%3Ccircle cx='920' cy='620' r='18'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: drop-shadow(0 0 12px rgba(24,231,207,0.15));
+      pointer-events: none;
+    }
+
+    .cyber-glow {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
       pointer-events: none;
       background:
-        radial-gradient(circle at 12% 72%, rgba(24,231,207,0.28) 0 8px, transparent 9px),
-        radial-gradient(circle at 16% 76%, rgba(24,231,207,0.18) 0 18px, transparent 19px),
-        radial-gradient(circle at 88% 26%, rgba(24,231,207,0.22) 0 11px, transparent 12px),
-        radial-gradient(circle at 92% 30%, rgba(255,255,255,0.12) 0 18px, transparent 19px),
-        linear-gradient(180deg, rgba(24,231,207,0.18) 0 80px, transparent 80px 100%);
-      mask-image: linear-gradient(to bottom, black, black 80%, transparent 100%);
-      opacity: 0.75;
+        radial-gradient(circle at 14% 75%, rgba(24,231,207,0.22) 0 38px, transparent 45px),
+        radial-gradient(circle at 85% 25%, rgba(0,170,255,0.20) 0 70px, transparent 78px),
+        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.10) 0 25px, transparent 32px),
+        linear-gradient(115deg, transparent 0 42%, rgba(24,231,207,0.08) 43%, transparent 48% 100%);
+      filter: blur(7px);
     }
 
     .hero-content {
@@ -140,16 +162,16 @@
 
     .spray-label {
       display: inline-block;
-      font-family: 'Bangers', cursive;
-      font-size: 1.45rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
       letter-spacing: 2px;
       color: #050505;
       background: #18e7cf;
-      padding: 7px 18px;
+      padding: 9px 18px;
       border-radius: 999px;
-      transform: rotate(-2deg);
       margin-bottom: 22px;
       box-shadow: 0 0 22px rgba(24,231,207,0.45);
+      font-weight: 900;
     }
 
     .hero h1 {
@@ -210,13 +232,12 @@
       border-radius: 20px;
       padding: 20px 12px;
       text-align: center;
-      transition: 0.3s;
     }
 
     .preview-item:hover {
-      transform: translateY(-5px) rotate(-1deg);
-      border-color: #18e7cf;
-      box-shadow: 0 0 22px rgba(24,231,207,0.2);
+      transform: none;
+      border-color: rgba(24,231,207,0.25);
+      box-shadow: none;
     }
 
     .preview-icon {
@@ -257,7 +278,7 @@
     }
 
     .btn-primary:hover {
-      transform: translateY(-5px) rotate(-1deg);
+      transform: translateY(-5px);
       box-shadow: 0 15px 35px rgba(24,231,207,0.55);
     }
 
@@ -269,7 +290,7 @@
 
     .btn-secondary:hover {
       background: rgba(24,231,207,0.14);
-      transform: translateY(-5px) rotate(1deg);
+      transform: translateY(-5px);
     }
 
     .section {
@@ -393,7 +414,7 @@
   </nav>
 
   <section class="hero" id="home">
-    <div class="paint-drips"></div>
+    <div class="cyber-glow"></div>
 
     <div class="hero-content">
       <div class="hero-copy">
@@ -403,7 +424,7 @@
 
         <p>
           Custom 3D printed cosplay masks, anime-inspired figures, keychains,
-          decals, and automotive emblems with a bold graffiti-inspired style.
+          decals, and automotive emblems with a futuristic custom-built style.
         </p>
 
         <div class="button-group">
