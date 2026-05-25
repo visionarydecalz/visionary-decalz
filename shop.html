@@ -1,138 +1,228 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shop - Visionary Decalz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop - Visionary Decalz</title>
 
-  <style>
-    body{
-      margin:0;
-      background:black;
-      color:white;
-      font-family:Arial;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-    nav{
-      background:#111;
-      padding:20px;
-      border-bottom:1px solid #18e7cf;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    nav a{
-      color:#18e7cf;
-      text-decoration:none;
-      font-weight:bold;
-    }
+body{
+  background:#000;
+  color:white;
+  font-family:Inter,sans-serif;
+  overflow-x:hidden;
+}
 
-    .container{
-      padding:60px;
-    }
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:rgba(0,0,0,.72);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(24,231,207,.28);
+}
 
-    h1{
-      color:#18e7cf;
-      text-align:center;
-      font-size:50px;
-      margin-bottom:50px;
-    }
+.logo{
+  font-family:Orbitron,sans-serif;
+  font-size:2rem;
+  font-weight:900;
+  color:#18e7cf;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
+.nav-links{
+  display:flex;
+  gap:30px;
+}
 
-    .card{
-      background:#111;
-      border:1px solid #18e7cf;
-      border-radius:20px;
-      padding:30px;
-      text-align:center;
-      transition:0.3s;
-      cursor:pointer;
-    }
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:.9rem;
+}
 
-    .card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 0 20px rgba(24,231,207,0.4);
-    }
+.shop-hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:140px 50px 80px;
+  background:
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.78)),
+    url("shop-bg.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
 
-    .icon{
-      font-size:60px;
-      margin-bottom:20px;
-    }
+.shop-box{
+  max-width:650px;
+  background:rgba(0,0,0,.72);
+  border:1px solid rgba(24,231,207,.45);
+  border-radius:8px;
+  padding:48px;
+  box-shadow:0 0 40px rgba(24,231,207,.18);
+  backdrop-filter:blur(10px);
+}
 
-    .card h2{
-      margin-bottom:15px;
-      color:#18e7cf;
-    }
+.badge{
+  color:#18e7cf;
+  font-size:.85rem;
+  font-weight:900;
+  letter-spacing:2px;
+  margin-bottom:24px;
+  text-transform:uppercase;
+}
 
-    .card p{
-      color:#ccc;
-    }
+h1{
+  font-family:Orbitron,sans-serif;
+  font-size:clamp(3rem,7vw,6rem);
+  line-height:.92;
+  margin-bottom:24px;
+}
 
-    .card-link{
-      text-decoration:none;
-      color:white;
-    }
-  </style>
+h1 span{
+  color:#18e7cf;
+}
+
+.shop-box p{
+  color:#e2e2e2;
+  font-size:1.15rem;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.category-card{
+  display:block;
+  text-decoration:none;
+  color:white;
+  background:rgba(0,0,0,.65);
+  border:1px solid rgba(24,231,207,.45);
+  padding:22px;
+  border-radius:8px;
+  text-align:center;
+  transition:.25s;
+}
+
+.category-card:hover{
+  background:rgba(24,231,207,.12);
+  transform:translateY(-3px);
+}
+
+.category-card h2{
+  color:#18e7cf;
+  font-size:1rem;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+.category-card p{
+  font-size:.9rem;
+  margin:0;
+  color:#ccc;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+  border-top:1px solid #222;
+  background:black;
+}
+
+@media(max-width:768px){
+  nav{
+    flex-direction:column;
+    gap:18px;
+    padding:18px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .shop-hero{
+    padding:150px 22px 70px;
+  }
+
+  .shop-box{
+    padding:35px 24px;
+  }
+
+  .category-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-  <a href="index.html">← Back To Home</a>
+  <div class="logo">Visionary Decalz</div>
 
-  <div>
-    Visionary Decalz Shop
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
   </div>
 </nav>
 
-<div class="container">
+<div class="shop-hero">
+  <div class="shop-box">
+    <div class="badge">SHOP ALL PRODUCTS</div>
 
-<h1>Shop Categories</h1>
+    <h1>SHOP OUR <span>COLLECTION</span></h1>
 
-<div class="grid">
+    <p>
+      Browse custom 3D printed masks, figures, keychains, decals, and automotive emblems.
+    </p>
 
-<a class="card-link" href="cosplay-masks.html">
-  <div class="card">
-    <div class="icon">🎭</div>
-    <h2>Cosplay Masks</h2>
-    <p>Custom wearable cosplay masks and props.</p>
+    <div class="category-grid">
+      <a class="category-card" href="cosplay-masks.html">
+        <h2>Cosplay Masks</h2>
+        <p>3D printed wearable masks.</p>
+      </a>
+
+      <a class="category-card" href="anime-figures.html">
+        <h2>Anime Figures</h2>
+        <p>Custom printed figures.</p>
+      </a>
+
+      <a class="category-card" href="keychains.html">
+        <h2>Keychains</h2>
+        <p>Custom accessories.</p>
+      </a>
+
+      <a class="category-card" href="car-emblems.html">
+        <h2>Car Emblems</h2>
+        <p>Badges and automotive designs.</p>
+      </a>
+    </div>
   </div>
-</a>
-
-<a class="card-link" href="anime-figures.html">
-  <div class="card">
-    <div class="icon">⚡</div>
-    <h2>Anime Figures</h2>
-    <p>Anime and Pokemon-inspired 3D printed figures.</p>
-  </div>
-</a>
-
-<a class="card-link" href="keychains.html">
-  <div class="card">
-    <div class="icon">🔑</div>
-    <h2>Keychains</h2>
-    <p>Custom keychains and accessories.</p>
-  </div>
-</a>
-
-<a class="card-link" href="car-emblems.html">
-  <div class="card">
-    <div class="icon">🚗</div>
-    <h2>Car Emblems</h2>
-    <p>Custom car badges and automotive designs.</p>
-  </div>
-</a>
-
 </div>
 
-</div>
+<footer>
+  © 2026 Visionary Decalz — Custom 3D Printed Merch & Designs
+</footer>
 
 </body>
 </html>
