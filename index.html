@@ -76,9 +76,9 @@ nav{
   color:white;
 }
 
-/* HERO */
+/* MAIN BACKGROUND */
 
-.hero{
+.main-section{
   min-height:100vh;
 
   display:flex;
@@ -89,33 +89,21 @@ nav{
   position:relative;
 
   background:
-    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.78)),
+    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.75)),
     url("homepage-bg.png");
 
-  background-size:cover;
-  background-position:center;
+  background-size:contain;
+
+  background-position:center center;
+
   background-repeat:no-repeat;
-}
 
-.hero::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.18),
-      rgba(0,0,0,.55)
-    );
-
-  z-index:1;
+  background-color:black;
 }
 
 /* CONTENT BOX */
 
-.hero-box{
+.content-box{
   position:relative;
   z-index:2;
 
@@ -168,7 +156,7 @@ h1 span{
     0 0 20px rgba(24,231,207,.45);
 }
 
-.hero-box p{
+.content-box p{
   color:#e2e2e2;
 
   font-size:1.15rem;
@@ -289,11 +277,13 @@ footer{
     justify-content:center;
   }
 
-  .hero{
+  .main-section{
     padding:150px 22px 70px;
+
+    background-size:contain;
   }
 
-  .hero-box{
+  .content-box{
     padding:35px 24px;
   }
 
@@ -321,11 +311,11 @@ footer{
 
 </nav>
 
-<!-- HERO -->
+<!-- MAIN SECTION -->
 
-<div class="hero">
+<div class="main-section">
 
-  <div class="hero-box">
+  <div class="content-box">
 
     <div class="badge">
       CUSTOM 3D PRINTED PRODUCTS
