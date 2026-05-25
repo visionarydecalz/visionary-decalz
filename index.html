@@ -36,11 +36,11 @@ nav{
 
   padding:20px 50px;
 
-  background:rgba(0,0,0,.72);
+  background:rgba(0,0,0,.55);
 
-  backdrop-filter:blur(12px);
+  backdrop-filter:blur(10px);
 
-  border-bottom:1px solid rgba(24,231,207,.28);
+  border-bottom:1px solid rgba(24,231,207,.22);
 }
 
 .logo{
@@ -51,7 +51,7 @@ nav{
   color:#18e7cf;
 
   text-shadow:
-    0 0 20px rgba(24,231,207,.45);
+    0 0 20px rgba(24,231,207,.35);
 }
 
 .nav-links{
@@ -76,51 +76,67 @@ nav{
   color:white;
 }
 
-/* MAIN BACKGROUND */
+/* HERO SECTION */
 
-.main-section{
+.hero{
   min-height:100vh;
 
   display:flex;
   align-items:center;
 
-  padding:140px 50px 80px;
+  padding:140px 70px 80px;
 
   position:relative;
 
   background:
-    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.75)),
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.72)
+    ),
+
     url("homepage-bg.png");
 
-  background-size:contain;
+  background-size:cover;
 
   background-position:center center;
 
   background-repeat:no-repeat;
+}
 
-  background-color:black;
+.hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at top right,
+    rgba(24,231,207,.18),
+    transparent 30%);
+
+  z-index:1;
 }
 
 /* CONTENT BOX */
 
-.content-box{
+.hero-box{
   position:relative;
   z-index:2;
 
-  max-width:620px;
+  max-width:650px;
 
   background:rgba(0,0,0,.72);
 
-  border:1px solid rgba(24,231,207,.45);
+  border:1px solid rgba(24,231,207,.32);
 
-  border-radius:8px;
+  border-radius:12px;
 
-  padding:48px;
+  padding:55px;
+
+  backdrop-filter:blur(12px);
 
   box-shadow:
-    0 0 40px rgba(24,231,207,.18);
-
-  backdrop-filter:blur(10px);
+    0 0 45px rgba(24,231,207,.12);
 }
 
 .badge{
@@ -134,7 +150,7 @@ nav{
 
   letter-spacing:2px;
 
-  margin-bottom:24px;
+  margin-bottom:22px;
 
   text-transform:uppercase;
 }
@@ -146,22 +162,22 @@ h1{
 
   line-height:.92;
 
-  margin-bottom:24px;
+  margin-bottom:25px;
 }
 
 h1 span{
   color:#18e7cf;
 
   text-shadow:
-    0 0 20px rgba(24,231,207,.45);
+    0 0 25px rgba(24,231,207,.45);
 }
 
-.content-box p{
-  color:#e2e2e2;
+.hero-box p{
+  color:#e4e4e4;
 
-  font-size:1.15rem;
+  font-size:1.12rem;
 
-  line-height:1.8;
+  line-height:1.85;
 
   margin-bottom:35px;
 }
@@ -175,12 +191,13 @@ h1 span{
 }
 
 button{
-  padding:15px 34px;
+  padding:15px 35px;
 
   border:none;
-  border-radius:4px;
+  border-radius:6px;
 
   font-size:.95rem;
+
   font-weight:900;
 
   cursor:pointer;
@@ -196,7 +213,7 @@ button{
 }
 
 .primary:hover{
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 }
 
 .secondary{
@@ -208,7 +225,7 @@ button{
 }
 
 .secondary:hover{
-  background:rgba(24,231,207,.12);
+  background:rgba(24,231,207,.1);
 }
 
 /* SECTIONS */
@@ -242,7 +259,7 @@ section h2 span{
 
   color:#aaa;
 
-  line-height:1.8;
+  line-height:1.9;
 
   font-size:1.05rem;
 }
@@ -277,13 +294,13 @@ footer{
     justify-content:center;
   }
 
-  .main-section{
-    padding:150px 22px 70px;
+  .hero{
+    padding:150px 24px 70px;
 
-    background-size:contain;
+    background-position:center center;
   }
 
-  .content-box{
+  .hero-box{
     padding:35px 24px;
   }
 
@@ -311,11 +328,11 @@ footer{
 
 </nav>
 
-<!-- MAIN SECTION -->
+<!-- HERO -->
 
-<div class="main-section">
+<div class="hero">
 
-  <div class="content-box">
+  <div class="hero-box">
 
     <div class="badge">
       CUSTOM 3D PRINTED PRODUCTS
